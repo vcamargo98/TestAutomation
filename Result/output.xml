@@ -1,0 +1,1355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.7.1 on win32)" generated="20200924 23:20:45.404" rpa="false">
+<suite id="s1" name="Testcases" source="C:\Users\vgama\Documents\automation\testcases">
+<suite id="s1-s1" name="feature Login" source="C:\Users\vgama\Documents\automation\testcases\feature_Login.robot">
+<test id="s1-s1-t1" name="Scenario: Informar senha incorreta">
+<kw name="Iniciando o teste" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAplicacao}</arg>
+<arg>${navegadorChrome}</arg>
+</arguments>
+<msg timestamp="20200924 23:20:45.710" level="INFO">Opening browser 'chrome' to base url 'localhost:3000'.</msg>
+<status status="PASS" starttime="20200924 23:20:45.709" endtime="20200924 23:20:50.563"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200924 23:20:50.563" endtime="20200924 23:20:52.693"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:20:45.709" endtime="20200924 23:20:52.694"></status>
+</kw>
+<kw name="Given que estou na tela de login" library="step_Login">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkPaginaLogin}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20200924 23:20:52.697" endtime="20200924 23:20:52.726"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:20:52.696" endtime="20200924 23:20:52.726"></status>
+</kw>
+<kw name="When informo &quot;testuser&quot; e &quot;teste123&quot;" library="step_Login">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldUserName}</arg>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20200924 23:20:52.729" level="INFO">Typing text 'testuser' into text field '//*[@id="normal_login_username"]'.</msg>
+<status status="PASS" starttime="20200924 23:20:52.728" endtime="20200924 23:20:52.920"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldPassword}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200924 23:20:52.921" level="INFO">Typing text 'teste123' into text field '//*[@id="normal_login_password"]'.</msg>
+<status status="PASS" starttime="20200924 23:20:52.920" endtime="20200924 23:20:53.106"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${btnLogin}</arg>
+</arguments>
+<msg timestamp="20200924 23:20:53.107" level="INFO">Clicking button 'class:login-form-button'.</msg>
+<status status="PASS" starttime="20200924 23:20:53.107" endtime="20200924 23:20:53.191"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:20:52.727" endtime="20200924 23:20:53.191"></status>
+</kw>
+<kw name="Then apresenta mensagem de erro" library="step_Login">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${checkErrorLogin}</arg>
+</arguments>
+<msg timestamp="20200924 23:20:53.249" level="INFO">Current page contains text 'There was a problem logging in: Login/Password is incorrect'.</msg>
+<status status="PASS" starttime="20200924 23:20:53.193" endtime="20200924 23:20:53.249"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:20:53.192" endtime="20200924 23:20:53.249"></status>
+</kw>
+<kw name="Encerrando os testes" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200924 23:20:53.251" endtime="20200924 23:20:55.714"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:20:53.250" endtime="20200924 23:20:55.714"></status>
+</kw>
+<tags>
+<tag>SenhaIncorreta</tag>
+</tags>
+<status status="PASS" starttime="20200924 23:20:45.708" endtime="20200924 23:20:55.716" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="Scenario: Realiza login na aplicação">
+<kw name="Iniciando o teste" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAplicacao}</arg>
+<arg>${navegadorChrome}</arg>
+</arguments>
+<msg timestamp="20200924 23:20:55.723" level="INFO">Opening browser 'chrome' to base url 'localhost:3000'.</msg>
+<status status="PASS" starttime="20200924 23:20:55.722" endtime="20200924 23:21:00.466"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200924 23:21:00.466" endtime="20200924 23:21:02.616"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:20:55.722" endtime="20200924 23:21:02.616"></status>
+</kw>
+<kw name="Given que estou na tela de login" library="step_Login">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkPaginaLogin}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20200924 23:21:02.618" endtime="20200924 23:21:02.638"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:02.617" endtime="20200924 23:21:02.639"></status>
+</kw>
+<kw name="When informo &quot;testuser&quot; e &quot;pl123&quot;" library="step_Login">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldUserName}</arg>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:02.640" level="INFO">Typing text 'testuser' into text field '//*[@id="normal_login_username"]'.</msg>
+<status status="PASS" starttime="20200924 23:21:02.640" endtime="20200924 23:21:02.809"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldPassword}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:02.811" level="INFO">Typing text 'pl123' into text field '//*[@id="normal_login_password"]'.</msg>
+<status status="PASS" starttime="20200924 23:21:02.810" endtime="20200924 23:21:02.937"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${btnLogin}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:02.938" level="INFO">Clicking button 'class:login-form-button'.</msg>
+<status status="PASS" starttime="20200924 23:21:02.938" endtime="20200924 23:21:03.009"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:02.639" endtime="20200924 23:21:03.010"></status>
+</kw>
+<kw name="Then realizo login na aplicacao" library="step_Login">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkPaginaHome}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20200924 23:21:03.011" endtime="20200924 23:21:03.114"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:03.011" endtime="20200924 23:21:03.114"></status>
+</kw>
+<kw name="Encerrando os testes" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200924 23:21:03.116" endtime="20200924 23:21:05.473"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:03.115" endtime="20200924 23:21:05.474"></status>
+</kw>
+<tags>
+<tag>LoginAplicacao</tag>
+</tags>
+<status status="PASS" starttime="20200924 23:20:55.721" endtime="20200924 23:21:05.475" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200924 23:20:45.439" endtime="20200924 23:21:05.490"></status>
+</suite>
+<suite id="s1-s2" name="feature Page1" source="C:\Users\vgama\Documents\automation\testcases\feature_Page1.robot">
+<test id="s1-s2-t1" name="Scenario: Ordenar a coluna decrescente">
+<kw name="Iniciando o teste" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAplicacao}</arg>
+<arg>${navegadorChrome}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:05.514" level="INFO">Opening browser 'chrome' to base url 'localhost:3000'.</msg>
+<status status="PASS" starttime="20200924 23:21:05.514" endtime="20200924 23:21:10.679"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200924 23:21:10.679" endtime="20200924 23:21:12.797"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:05.513" endtime="20200924 23:21:12.797"></status>
+</kw>
+<kw name="Given que estou na page1" library="step_Page1">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${viewPage1}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:12.800" level="INFO">Clicking element '//*[@id="root"]/div/header/div[2]/nav/a[1]'.</msg>
+<status status="PASS" starttime="20200924 23:21:12.799" endtime="20200924 23:21:12.897"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkPage1}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20200924 23:21:12.897" endtime="20200924 23:21:13.003"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:12.799" endtime="20200924 23:21:13.004"></status>
+</kw>
+<kw name="When clico no campo Name para ordenar" library="step_Page1">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnCampoNome}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:13.007" level="INFO">Clicking element 'class:ant-table-column-sorters'.</msg>
+<status status="PASS" starttime="20200924 23:21:13.007" endtime="20200924 23:21:13.160"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:13.006" endtime="20200924 23:21:13.160"></status>
+</kw>
+<kw name="Then verifico a ordenacao decrescente" library="step_Page1">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldTableRow}</arg>
+</arguments>
+<assign>
+<var>${nome}</var>
+</assign>
+<msg timestamp="20200924 23:21:13.220" level="INFO">${nome} = Willard Medina</msg>
+<status status="PASS" starttime="20200924 23:21:13.163" endtime="20200924 23:21:13.220"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${nome}</arg>
+<arg>${checkOrdemDecrescente}</arg>
+</arguments>
+<status status="PASS" starttime="20200924 23:21:13.220" endtime="20200924 23:21:13.220"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:13.162" endtime="20200924 23:21:13.221"></status>
+</kw>
+<kw name="Encerrando os testes" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200924 23:21:13.222" endtime="20200924 23:21:15.626"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:13.221" endtime="20200924 23:21:15.627"></status>
+</kw>
+<tags>
+<tag>OrdenarColunaDecrescente</tag>
+</tags>
+<status status="PASS" starttime="20200924 23:21:05.512" endtime="20200924 23:21:15.627" critical="yes"></status>
+</test>
+<test id="s1-s2-t2" name="Scenario: Ordenar a coluna crescente">
+<kw name="Iniciando o teste" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAplicacao}</arg>
+<arg>${navegadorChrome}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:15.639" level="INFO">Opening browser 'chrome' to base url 'localhost:3000'.</msg>
+<status status="PASS" starttime="20200924 23:21:15.638" endtime="20200924 23:21:20.406"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200924 23:21:20.407" endtime="20200924 23:21:22.538"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:15.637" endtime="20200924 23:21:22.539"></status>
+</kw>
+<kw name="Given que estou na page1" library="step_Page1">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${viewPage1}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:22.540" level="INFO">Clicking element '//*[@id="root"]/div/header/div[2]/nav/a[1]'.</msg>
+<status status="PASS" starttime="20200924 23:21:22.540" endtime="20200924 23:21:22.627"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkPage1}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20200924 23:21:22.627" endtime="20200924 23:21:22.724"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:22.539" endtime="20200924 23:21:22.725"></status>
+</kw>
+<kw name="When faco a ordenacao crescente" library="step_Page1">
+<kw name="Double Click Element" library="SeleniumLibrary">
+<doc>Double clicks the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnCampoNome}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:22.727" level="INFO">Double clicking element 'class:ant-table-column-sorters'.</msg>
+<status status="PASS" starttime="20200924 23:21:22.726" endtime="20200924 23:21:23.130"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:22.725" endtime="20200924 23:21:23.131"></status>
+</kw>
+<kw name="Then verifico a ordenacao crescente" library="step_Page1">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldTableRow}</arg>
+</arguments>
+<assign>
+<var>${nomeCrescente}</var>
+</assign>
+<msg timestamp="20200924 23:21:23.179" level="INFO">${nomeCrescente} = Byron Hansen</msg>
+<status status="PASS" starttime="20200924 23:21:23.136" endtime="20200924 23:21:23.179"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${nomeCrescente}</arg>
+<arg>${checkOrdemCrescente}</arg>
+</arguments>
+<status status="PASS" starttime="20200924 23:21:23.180" endtime="20200924 23:21:23.180"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:23.135" endtime="20200924 23:21:23.181"></status>
+</kw>
+<kw name="Encerrando os testes" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200924 23:21:23.183" endtime="20200924 23:21:25.796"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:23.182" endtime="20200924 23:21:25.797"></status>
+</kw>
+<tags>
+<tag>OrdenarColunaDecrescente</tag>
+</tags>
+<status status="PASS" starttime="20200924 23:21:15.636" endtime="20200924 23:21:25.799" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200924 23:21:05.497" endtime="20200924 23:21:25.808"></status>
+</suite>
+<suite id="s1-s3" name="feature Page2" source="C:\Users\vgama\Documents\automation\testcases\feature_Page2.robot">
+<test id="s1-s3-t1" name="Scenario: Preencher Campos horizontal">
+<kw name="Iniciando o teste" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAplicacao}</arg>
+<arg>${navegadorChrome}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:25.831" level="INFO">Opening browser 'chrome' to base url 'localhost:3000'.</msg>
+<status status="PASS" starttime="20200924 23:21:25.831" endtime="20200924 23:21:30.854"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200924 23:21:30.855" endtime="20200924 23:21:32.978"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:25.830" endtime="20200924 23:21:32.978"></status>
+</kw>
+<kw name="Given que estou na page2" library="step_Page2">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${viewPage2}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:32.980" level="INFO">Clicking element '//*[@id="root"]/div/header/div[2]/nav/a[2]'.</msg>
+<status status="PASS" starttime="20200924 23:21:32.979" endtime="20200924 23:21:33.154"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkPage2}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20200924 23:21:33.154" endtime="20200924 23:21:33.185"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:32.979" endtime="20200924 23:21:33.185"></status>
+</kw>
+<kw name="When clico na opcao 'horizontal'" library="step_Page2">
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${formato}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:33.188" level="INFO">${formato} = horizontal</msg>
+<status status="PASS" starttime="20200924 23:21:33.187" endtime="20200924 23:21:33.188"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${formato}" == "horizontal"</arg>
+<arg>Click Element</arg>
+<arg>${btnHorizontal}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnHorizontal}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:33.190" level="INFO">Clicking element 'xpath=//div[@id='root']/div/main/div/form/div/div[2]/div/span/div/label/span[2]'.</msg>
+<status status="PASS" starttime="20200924 23:21:33.189" endtime="20200924 23:21:33.297"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:33.189" endtime="20200924 23:21:33.297"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${formato}" == "vertical"</arg>
+<arg>Click Element</arg>
+<arg>${btnVertical}</arg>
+</arguments>
+<status status="PASS" starttime="20200924 23:21:33.297" endtime="20200924 23:21:33.298"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${formato}" == "in line"</arg>
+<arg>Click Element</arg>
+<arg>${btnInline}</arg>
+</arguments>
+<status status="PASS" starttime="20200924 23:21:33.298" endtime="20200924 23:21:33.298"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:33.187" endtime="20200924 23:21:33.299"></status>
+</kw>
+<kw name="Then preencho os campos do formulario" library="step_Page2">
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>${btnInput}</arg>
+<arg>automacao</arg>
+</arguments>
+<msg timestamp="20200924 23:21:33.301" level="INFO">Sending key(s) ('automacao',) to class:ant-input-affix-wrapper element.</msg>
+<msg timestamp="20200924 23:21:33.319" level="INFO">Sending keys automacao</msg>
+<status status="PASS" starttime="20200924 23:21:33.301" endtime="20200924 23:21:33.739"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnPais}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:33.740" level="INFO">Clicking element 'xpath=//div[@id='root']/div/main/div/form/div[3]/div[2]/div/span/div/div/div/div'.</msg>
+<status status="PASS" starttime="20200924 23:21:33.739" endtime="20200924 23:21:33.853"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20200924 23:21:33.854" level="INFO">Sending key(s) ('ARROW_DOWN', 'RETURN') to page.</msg>
+<msg timestamp="20200924 23:21:33.854" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20200924 23:21:33.879" level="INFO">Pressing special key RETURN to browser.</msg>
+<status status="PASS" starttime="20200924 23:21:33.853" endtime="20200924 23:21:33.941"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldTreeSelect}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:33.942" level="INFO">Clicking element 'xpath=//div[@id='root']/div/main/div/form/div[4]/div[2]/div/span/span/span/span/span'.</msg>
+<status status="PASS" starttime="20200924 23:21:33.941" endtime="20200924 23:21:34.059"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnColor}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:34.060" level="INFO">Clicking element 'css=i.anticon.anticon-caret-down.ant-select-switcher-icon &gt; svg &gt; path'.</msg>
+<status status="PASS" starttime="20200924 23:21:34.059" endtime="20200924 23:21:34.155"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[contains(text(),'Red')]</arg>
+</arguments>
+<msg timestamp="20200924 23:21:34.155" level="INFO">Clicking element '//*[contains(text(),'Red')]'.</msg>
+<status status="PASS" starttime="20200924 23:21:34.155" endtime="20200924 23:21:34.249"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldState}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:34.250" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/main/div/form/div[5]/div[2]/div/span/span/input'.</msg>
+<status status="PASS" starttime="20200924 23:21:34.249" endtime="20200924 23:21:34.366"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<arg>ARROW_RIGHT</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20200924 23:21:34.368" level="INFO">Sending key(s) ('ARROW_DOWN', 'ARROW_RIGHT', 'RETURN') to page.</msg>
+<msg timestamp="20200924 23:21:34.368" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20200924 23:21:34.394" level="INFO">Pressing special key ARROW_RIGHT to browser.</msg>
+<msg timestamp="20200924 23:21:34.414" level="INFO">Pressing special key RETURN to browser.</msg>
+<status status="PASS" starttime="20200924 23:21:34.366" endtime="20200924 23:21:34.435"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldDataPicker}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:34.436" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/main/div/form/div[6]/div[2]/div/span/span/div/input'.</msg>
+<status status="PASS" starttime="20200924 23:21:34.435" endtime="20200924 23:21:34.642"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldSelectDate}</arg>
+<arg>2020-09-30</arg>
+</arguments>
+<msg timestamp="20200924 23:21:34.642" level="INFO">Typing text '2020-09-30' into text field 'class:ant-calendar-input'.</msg>
+<status status="PASS" starttime="20200924 23:21:34.642" endtime="20200924 23:21:34.823"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20200924 23:21:34.824" level="INFO">Sending key(s) ('RETURN',) to page.</msg>
+<msg timestamp="20200924 23:21:34.824" level="INFO">Pressing special key RETURN to browser.</msg>
+<status status="PASS" starttime="20200924 23:21:34.823" endtime="20200924 23:21:34.860"></status>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:ant-calendar-picker-input</arg>
+</arguments>
+<assign>
+<var>${dia}</var>
+</assign>
+<msg timestamp="20200924 23:21:34.883" level="INFO">${dia} = 2020-09-30</msg>
+<status status="PASS" starttime="20200924 23:21:34.861" endtime="20200924 23:21:34.883"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${dia}</arg>
+<arg>2020-09-30</arg>
+</arguments>
+<status status="PASS" starttime="20200924 23:21:34.883" endtime="20200924 23:21:34.883"></status>
+</kw>
+<kw name="Drag And Drop By Offset" library="SeleniumLibrary">
+<doc>Drags the element identified with ``locator`` by ``xoffset/yoffset``.</doc>
+<arguments>
+<arg>${btnSlider}</arg>
+<arg>50</arg>
+<arg>0</arg>
+</arguments>
+<status status="PASS" starttime="20200924 23:21:34.883" endtime="20200924 23:21:35.512"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${btnSwitch}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:35.512" level="INFO">Clicking button 'xpath=//*[@id="root"]/div/main/div/form/div[8]/div[2]/div/span/button'.</msg>
+<status status="PASS" starttime="20200924 23:21:35.512" endtime="20200924 23:21:35.622"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldTextArea}</arg>
+<arg>Teste automatizado</arg>
+</arguments>
+<msg timestamp="20200924 23:21:35.623" level="INFO">Typing text 'Teste automatizado' into text field 'xpath=//div[@id='root']/div/main/div/form/div[9]/div[2]/div/span/textarea'.</msg>
+<status status="PASS" starttime="20200924 23:21:35.622" endtime="20200924 23:21:35.767"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:33.300" endtime="20200924 23:21:35.768"></status>
+</kw>
+<kw name="Encerrando os testes" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200924 23:21:35.769" endtime="20200924 23:21:38.274"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:35.769" endtime="20200924 23:21:38.274"></status>
+</kw>
+<tags>
+<tag>PreencherCamposHorizontal</tag>
+</tags>
+<status status="PASS" starttime="20200924 23:21:25.829" endtime="20200924 23:21:38.276" critical="yes"></status>
+</test>
+<test id="s1-s3-t2" name="Scenario: Preencher Campos vertical">
+<kw name="Iniciando o teste" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAplicacao}</arg>
+<arg>${navegadorChrome}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:38.294" level="INFO">Opening browser 'chrome' to base url 'localhost:3000'.</msg>
+<status status="PASS" starttime="20200924 23:21:38.293" endtime="20200924 23:21:42.997"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200924 23:21:42.997" endtime="20200924 23:21:45.129"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:38.291" endtime="20200924 23:21:45.129"></status>
+</kw>
+<kw name="Given que estou na page2" library="step_Page2">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${viewPage2}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:45.131" level="INFO">Clicking element '//*[@id="root"]/div/header/div[2]/nav/a[2]'.</msg>
+<status status="PASS" starttime="20200924 23:21:45.131" endtime="20200924 23:21:45.279"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkPage2}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20200924 23:21:45.279" endtime="20200924 23:21:45.303"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:45.130" endtime="20200924 23:21:45.304"></status>
+</kw>
+<kw name="When clico na opcao 'vertical'" library="step_Page2">
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${formato}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:45.305" level="INFO">${formato} = vertical</msg>
+<status status="PASS" starttime="20200924 23:21:45.305" endtime="20200924 23:21:45.305"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${formato}" == "horizontal"</arg>
+<arg>Click Element</arg>
+<arg>${btnHorizontal}</arg>
+</arguments>
+<status status="PASS" starttime="20200924 23:21:45.305" endtime="20200924 23:21:45.306"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${formato}" == "vertical"</arg>
+<arg>Click Element</arg>
+<arg>${btnVertical}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnVertical}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:45.306" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/main/div/form/div[1]/div[2]/div/span/div/label[2]/span[2]'.</msg>
+<status status="PASS" starttime="20200924 23:21:45.306" endtime="20200924 23:21:45.445"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:45.306" endtime="20200924 23:21:45.446"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${formato}" == "in line"</arg>
+<arg>Click Element</arg>
+<arg>${btnInline}</arg>
+</arguments>
+<status status="PASS" starttime="20200924 23:21:45.446" endtime="20200924 23:21:45.446"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:45.304" endtime="20200924 23:21:45.447"></status>
+</kw>
+<kw name="Then preencho os campos do formulario" library="step_Page2">
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>${btnInput}</arg>
+<arg>automacao</arg>
+</arguments>
+<msg timestamp="20200924 23:21:45.451" level="INFO">Sending key(s) ('automacao',) to class:ant-input-affix-wrapper element.</msg>
+<msg timestamp="20200924 23:21:45.480" level="INFO">Sending keys automacao</msg>
+<status status="PASS" starttime="20200924 23:21:45.450" endtime="20200924 23:21:45.859"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnPais}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:45.859" level="INFO">Clicking element 'xpath=//div[@id='root']/div/main/div/form/div[3]/div[2]/div/span/div/div/div/div'.</msg>
+<status status="PASS" starttime="20200924 23:21:45.859" endtime="20200924 23:21:45.959"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20200924 23:21:45.961" level="INFO">Sending key(s) ('ARROW_DOWN', 'RETURN') to page.</msg>
+<msg timestamp="20200924 23:21:45.961" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20200924 23:21:45.976" level="INFO">Pressing special key RETURN to browser.</msg>
+<status status="PASS" starttime="20200924 23:21:45.960" endtime="20200924 23:21:46.014"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldTreeSelect}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:46.015" level="INFO">Clicking element 'xpath=//div[@id='root']/div/main/div/form/div[4]/div[2]/div/span/span/span/span/span'.</msg>
+<status status="PASS" starttime="20200924 23:21:46.014" endtime="20200924 23:21:46.128"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnColor}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:46.128" level="INFO">Clicking element 'css=i.anticon.anticon-caret-down.ant-select-switcher-icon &gt; svg &gt; path'.</msg>
+<status status="PASS" starttime="20200924 23:21:46.128" endtime="20200924 23:21:46.191"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[contains(text(),'Red')]</arg>
+</arguments>
+<msg timestamp="20200924 23:21:46.191" level="INFO">Clicking element '//*[contains(text(),'Red')]'.</msg>
+<status status="PASS" starttime="20200924 23:21:46.191" endtime="20200924 23:21:46.285"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldState}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:46.286" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/main/div/form/div[5]/div[2]/div/span/span/input'.</msg>
+<status status="PASS" starttime="20200924 23:21:46.286" endtime="20200924 23:21:46.382"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<arg>ARROW_RIGHT</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20200924 23:21:46.383" level="INFO">Sending key(s) ('ARROW_DOWN', 'ARROW_RIGHT', 'RETURN') to page.</msg>
+<msg timestamp="20200924 23:21:46.383" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20200924 23:21:46.402" level="INFO">Pressing special key ARROW_RIGHT to browser.</msg>
+<msg timestamp="20200924 23:21:46.418" level="INFO">Pressing special key RETURN to browser.</msg>
+<status status="PASS" starttime="20200924 23:21:46.383" endtime="20200924 23:21:46.437"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldDataPicker}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:46.437" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/main/div/form/div[6]/div[2]/div/span/span/div/input'.</msg>
+<status status="PASS" starttime="20200924 23:21:46.437" endtime="20200924 23:21:46.612"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldSelectDate}</arg>
+<arg>2020-09-30</arg>
+</arguments>
+<msg timestamp="20200924 23:21:46.613" level="INFO">Typing text '2020-09-30' into text field 'class:ant-calendar-input'.</msg>
+<status status="PASS" starttime="20200924 23:21:46.612" endtime="20200924 23:21:46.781"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20200924 23:21:46.782" level="INFO">Sending key(s) ('RETURN',) to page.</msg>
+<msg timestamp="20200924 23:21:46.782" level="INFO">Pressing special key RETURN to browser.</msg>
+<status status="PASS" starttime="20200924 23:21:46.781" endtime="20200924 23:21:46.833"></status>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:ant-calendar-picker-input</arg>
+</arguments>
+<assign>
+<var>${dia}</var>
+</assign>
+<msg timestamp="20200924 23:21:46.857" level="INFO">${dia} = 2020-09-30</msg>
+<status status="PASS" starttime="20200924 23:21:46.833" endtime="20200924 23:21:46.857"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${dia}</arg>
+<arg>2020-09-30</arg>
+</arguments>
+<status status="PASS" starttime="20200924 23:21:46.858" endtime="20200924 23:21:46.858"></status>
+</kw>
+<kw name="Drag And Drop By Offset" library="SeleniumLibrary">
+<doc>Drags the element identified with ``locator`` by ``xoffset/yoffset``.</doc>
+<arguments>
+<arg>${btnSlider}</arg>
+<arg>50</arg>
+<arg>0</arg>
+</arguments>
+<status status="PASS" starttime="20200924 23:21:46.858" endtime="20200924 23:21:47.427"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${btnSwitch}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:47.427" level="INFO">Clicking button 'xpath=//*[@id="root"]/div/main/div/form/div[8]/div[2]/div/span/button'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200924 23:21:48.006" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200924 23:21:47.478" endtime="20200924 23:21:48.006"></status>
+</kw>
+<msg timestamp="20200924 23:21:48.043" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=85.0.4183.121)
+</msg>
+<status status="FAIL" starttime="20200924 23:21:47.427" endtime="20200924 23:21:48.043"></status>
+</kw>
+<status status="FAIL" starttime="20200924 23:21:45.450" endtime="20200924 23:21:48.043"></status>
+</kw>
+<kw name="Encerrando os testes" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200924 23:21:48.045" endtime="20200924 23:21:50.492"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:48.044" endtime="20200924 23:21:50.493"></status>
+</kw>
+<tags>
+<tag>OrdenarColunaVertical</tag>
+</tags>
+<status status="FAIL" starttime="20200924 23:21:38.289" endtime="20200924 23:21:50.495" critical="yes">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=85.0.4183.121)
+</status>
+</test>
+<test id="s1-s3-t3" name="Scenario: Preencher Campos in line">
+<kw name="Iniciando o teste" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAplicacao}</arg>
+<arg>${navegadorChrome}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:50.515" level="INFO">Opening browser 'chrome' to base url 'localhost:3000'.</msg>
+<status status="PASS" starttime="20200924 23:21:50.514" endtime="20200924 23:21:55.512"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200924 23:21:55.512" endtime="20200924 23:21:57.649"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:50.513" endtime="20200924 23:21:57.650"></status>
+</kw>
+<kw name="Given que estou na page2" library="step_Page2">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${viewPage2}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:57.651" level="INFO">Clicking element '//*[@id="root"]/div/header/div[2]/nav/a[2]'.</msg>
+<status status="PASS" starttime="20200924 23:21:57.651" endtime="20200924 23:21:57.820"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkPage2}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20200924 23:21:57.820" endtime="20200924 23:21:57.843"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:57.650" endtime="20200924 23:21:57.843"></status>
+</kw>
+<kw name="When clico na opcao 'in line'" library="step_Page2">
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${formato}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:57.846" level="INFO">${formato} = in line</msg>
+<status status="PASS" starttime="20200924 23:21:57.845" endtime="20200924 23:21:57.846"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${formato}" == "horizontal"</arg>
+<arg>Click Element</arg>
+<arg>${btnHorizontal}</arg>
+</arguments>
+<status status="PASS" starttime="20200924 23:21:57.846" endtime="20200924 23:21:57.847"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${formato}" == "vertical"</arg>
+<arg>Click Element</arg>
+<arg>${btnVertical}</arg>
+</arguments>
+<status status="PASS" starttime="20200924 23:21:57.847" endtime="20200924 23:21:57.848"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${formato}" == "in line"</arg>
+<arg>Click Element</arg>
+<arg>${btnInline}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnInline}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:57.850" level="INFO">Clicking element '//*[@id="root"]/div/main/div/form/div[1]/div[2]/div/span/div/label[3]/span[2]'.</msg>
+<status status="PASS" starttime="20200924 23:21:57.849" endtime="20200924 23:21:58.068"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:57.848" endtime="20200924 23:21:58.068"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:57.844" endtime="20200924 23:21:58.069"></status>
+</kw>
+<kw name="Then preencho os campos do formulario in line" library="step_Page2">
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>${btnInput}</arg>
+<arg>automacao</arg>
+</arguments>
+<msg timestamp="20200924 23:21:58.071" level="INFO">Sending key(s) ('automacao',) to class:ant-input-affix-wrapper element.</msg>
+<msg timestamp="20200924 23:21:58.113" level="INFO">Sending keys automacao</msg>
+<status status="PASS" starttime="20200924 23:21:58.070" endtime="20200924 23:21:58.476"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="root"]/div/main/div/form/div[3]/div[2]/div/span/div/div/span/i</arg>
+</arguments>
+<msg timestamp="20200924 23:21:58.476" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/main/div/form/div[3]/div[2]/div/span/div/div/span/i'.</msg>
+<status status="PASS" starttime="20200924 23:21:58.476" endtime="20200924 23:21:58.595"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>Canada</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20200924 23:21:58.596" level="INFO">Sending key(s) ('Canada', 'RETURN') to page.</msg>
+<msg timestamp="20200924 23:21:58.596" level="INFO">Sending keys Canada</msg>
+<msg timestamp="20200924 23:21:58.765" level="INFO">Pressing special key RETURN to browser.</msg>
+<status status="PASS" starttime="20200924 23:21:58.595" endtime="20200924 23:21:58.795"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="root"]/div/main/div/form/div[4]/div[2]/div/span/span/span/span[2]</arg>
+</arguments>
+<msg timestamp="20200924 23:21:58.796" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/main/div/form/div[4]/div[2]/div/span/span/span/span[2]'.</msg>
+<status status="PASS" starttime="20200924 23:21:58.795" endtime="20200924 23:21:58.893"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnColor}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:58.894" level="INFO">Clicking element 'css=i.anticon.anticon-caret-down.ant-select-switcher-icon &gt; svg &gt; path'.</msg>
+<status status="PASS" starttime="20200924 23:21:58.893" endtime="20200924 23:21:58.985"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[contains(text(),'Green')]</arg>
+</arguments>
+<msg timestamp="20200924 23:21:58.985" level="INFO">Clicking element '//*[contains(text(),'Green')]'.</msg>
+<status status="PASS" starttime="20200924 23:21:58.985" endtime="20200924 23:21:59.090"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldState}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:59.090" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/main/div/form/div[5]/div[2]/div/span/span/input'.</msg>
+<status status="PASS" starttime="20200924 23:21:59.090" endtime="20200924 23:21:59.188"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<arg>ARROW_RIGHT</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20200924 23:21:59.189" level="INFO">Sending key(s) ('ARROW_DOWN', 'ARROW_RIGHT', 'RETURN') to page.</msg>
+<msg timestamp="20200924 23:21:59.189" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20200924 23:21:59.212" level="INFO">Pressing special key ARROW_RIGHT to browser.</msg>
+<msg timestamp="20200924 23:21:59.234" level="INFO">Pressing special key RETURN to browser.</msg>
+<status status="PASS" starttime="20200924 23:21:59.188" endtime="20200924 23:21:59.251"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldDataPicker}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:59.252" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/main/div/form/div[6]/div[2]/div/span/span/div/input'.</msg>
+<status status="PASS" starttime="20200924 23:21:59.252" endtime="20200924 23:21:59.449"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div/div/div/div/div[2]/div[3]/span</arg>
+</arguments>
+<msg timestamp="20200924 23:21:59.449" level="INFO">Clicking element 'xpath=/html/body/div[5]/div/div/div/div/div[2]/div[3]/span'.</msg>
+<status status="PASS" starttime="20200924 23:21:59.449" endtime="20200924 23:21:59.577"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="root"]/div/main/div/form/div[7]/div[2]/div/span/div[2]/div[2]/input</arg>
+<arg>4</arg>
+</arguments>
+<msg timestamp="20200924 23:21:59.578" level="INFO">Typing text '4' into text field 'xpath=//*[@id="root"]/div/main/div/form/div[7]/div[2]/div/span/div[2]/div[2]/input'.</msg>
+<status status="PASS" starttime="20200924 23:21:59.577" endtime="20200924 23:21:59.754"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${btnSwitch}</arg>
+</arguments>
+<msg timestamp="20200924 23:21:59.754" level="INFO">Clicking button 'xpath=//*[@id="root"]/div/main/div/form/div[8]/div[2]/div/span/button'.</msg>
+<status status="PASS" starttime="20200924 23:21:59.754" endtime="20200924 23:21:59.875"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${fieldTextArea}</arg>
+<arg>Teste automatizado</arg>
+</arguments>
+<msg timestamp="20200924 23:21:59.875" level="INFO">Typing text 'Teste automatizado' into text field 'xpath=//div[@id='root']/div/main/div/form/div[9]/div[2]/div/span/textarea'.</msg>
+<status status="PASS" starttime="20200924 23:21:59.875" endtime="20200924 23:22:00.026"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:21:58.069" endtime="20200924 23:22:00.026"></status>
+</kw>
+<kw name="Encerrando os testes" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200924 23:22:00.029" endtime="20200924 23:22:02.425"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:22:00.028" endtime="20200924 23:22:02.426"></status>
+</kw>
+<tags>
+<tag>OrdenarColunaInline</tag>
+</tags>
+<status status="PASS" starttime="20200924 23:21:50.511" endtime="20200924 23:22:02.428" critical="yes"></status>
+</test>
+<status status="FAIL" starttime="20200924 23:21:25.812" endtime="20200924 23:22:02.444"></status>
+</suite>
+<suite id="s1-s4" name="feature Page3" source="C:\Users\vgama\Documents\automation\testcases\feature_Page3.robot">
+<test id="s1-s4-t1" name="Scenario: Retornar a pagina Home">
+<kw name="Iniciando o teste" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAplicacao}</arg>
+<arg>${navegadorChrome}</arg>
+</arguments>
+<msg timestamp="20200924 23:22:02.475" level="INFO">Opening browser 'chrome' to base url 'localhost:3000'.</msg>
+<status status="PASS" starttime="20200924 23:22:02.475" endtime="20200924 23:22:07.167"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200924 23:22:07.168" endtime="20200924 23:22:09.304"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:22:02.474" endtime="20200924 23:22:09.304"></status>
+</kw>
+<kw name="Given que estou na page3" library="step_Page3">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${viewPage3}</arg>
+</arguments>
+<msg timestamp="20200924 23:22:09.306" level="INFO">Clicking element '//*[@id="root"]/div/header/div[2]/nav/a[3]'.</msg>
+<status status="PASS" starttime="20200924 23:22:09.306" endtime="20200924 23:22:09.384"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>class:Page3_BackgroundImg__2VVSY</arg>
+</arguments>
+<msg timestamp="20200924 23:22:09.399" level="INFO">Current page contains element 'class:Page3_BackgroundImg__2VVSY'.</msg>
+<status status="PASS" starttime="20200924 23:22:09.384" endtime="20200924 23:22:09.399"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:22:09.305" endtime="20200924 23:22:09.399"></status>
+</kw>
+<kw name="Then volto para a pagina HOME" library="step_Page3">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnVoltarHome}</arg>
+</arguments>
+<msg timestamp="20200924 23:22:09.402" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/main/div/div[2]/span[1]/span[1]/a'.</msg>
+<status status="PASS" starttime="20200924 23:22:09.401" endtime="20200924 23:22:09.466"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkPaginaHome}</arg>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20200924 23:22:09.466" endtime="20200924 23:22:09.490"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:22:09.401" endtime="20200924 23:22:09.490"></status>
+</kw>
+<kw name="Encerrando os testes" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200924 23:22:09.491" endtime="20200924 23:22:11.790"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:22:09.491" endtime="20200924 23:22:11.790"></status>
+</kw>
+<tags>
+<tag>VoltarHome</tag>
+</tags>
+<status status="PASS" starttime="20200924 23:22:02.473" endtime="20200924 23:22:11.792" critical="yes"></status>
+</test>
+<test id="s1-s4-t2" name="Scenario: Retornar a pagina Page 1">
+<kw name="Iniciando o teste" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAplicacao}</arg>
+<arg>${navegadorChrome}</arg>
+</arguments>
+<msg timestamp="20200924 23:22:11.813" level="INFO">Opening browser 'chrome' to base url 'localhost:3000'.</msg>
+<status status="PASS" starttime="20200924 23:22:11.812" endtime="20200924 23:22:16.654"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200924 23:22:16.654" endtime="20200924 23:22:18.774"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:22:11.811" endtime="20200924 23:22:18.774"></status>
+</kw>
+<kw name="Given que estou na page3" library="step_Page3">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${viewPage3}</arg>
+</arguments>
+<msg timestamp="20200924 23:22:18.776" level="INFO">Clicking element '//*[@id="root"]/div/header/div[2]/nav/a[3]'.</msg>
+<status status="PASS" starttime="20200924 23:22:18.776" endtime="20200924 23:22:18.864"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>class:Page3_BackgroundImg__2VVSY</arg>
+</arguments>
+<msg timestamp="20200924 23:22:18.878" level="INFO">Current page contains element 'class:Page3_BackgroundImg__2VVSY'.</msg>
+<status status="PASS" starttime="20200924 23:22:18.865" endtime="20200924 23:22:18.878"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:22:18.775" endtime="20200924 23:22:18.879"></status>
+</kw>
+<kw name="Then volto para a pagina Page 1" library="step_Page3">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btnVoltarPage1}</arg>
+</arguments>
+<msg timestamp="20200924 23:22:18.884" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/main/div/div[2]/span[2]/span[1]/a'.</msg>
+<status status="PASS" starttime="20200924 23:22:18.883" endtime="20200924 23:22:18.990"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkPage1}</arg>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20200924 23:22:18.990" endtime="20200924 23:22:19.081"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:22:18.882" endtime="20200924 23:22:19.081"></status>
+</kw>
+<kw name="Encerrando os testes" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200924 23:22:19.085" endtime="20200924 23:22:21.598"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:22:19.084" endtime="20200924 23:22:21.599"></status>
+</kw>
+<tags>
+<tag>VoltarPage1</tag>
+</tags>
+<status status="PASS" starttime="20200924 23:22:11.807" endtime="20200924 23:22:21.600" critical="yes"></status>
+</test>
+<test id="s1-s4-t3" name="Scenario: Retornar a pagina Page 2">
+<kw name="Iniciando o teste" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAplicacao}</arg>
+<arg>${navegadorChrome}</arg>
+</arguments>
+<msg timestamp="20200924 23:22:21.607" level="INFO">Opening browser 'chrome' to base url 'localhost:3000'.</msg>
+<status status="PASS" starttime="20200924 23:22:21.607" endtime="20200924 23:22:26.401"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200924 23:22:26.401" endtime="20200924 23:22:28.523"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:22:21.606" endtime="20200924 23:22:28.523"></status>
+</kw>
+<kw name="Given que estou na page3" library="step_Page3">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${viewPage3}</arg>
+</arguments>
+<msg timestamp="20200924 23:22:28.524" level="INFO">Clicking element '//*[@id="root"]/div/header/div[2]/nav/a[3]'.</msg>
+<status status="PASS" starttime="20200924 23:22:28.524" endtime="20200924 23:22:28.596"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>class:Page3_BackgroundImg__2VVSY</arg>
+</arguments>
+<msg timestamp="20200924 23:22:28.609" level="INFO">Current page contains element 'class:Page3_BackgroundImg__2VVSY'.</msg>
+<status status="PASS" starttime="20200924 23:22:28.596" endtime="20200924 23:22:28.609"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:22:28.524" endtime="20200924 23:22:28.609"></status>
+</kw>
+<kw name="Then volto para a pagina Page2" library="step_Page3">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${btnVoltarPage2}</arg>
+</arguments>
+<msg timestamp="20200924 23:22:28.611" level="INFO">Clicking link 'xpath=//*[@id="root"]/div/main/div/div[2]/span[3]/span[1]/a'.</msg>
+<status status="PASS" starttime="20200924 23:22:28.611" endtime="20200924 23:22:28.686"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkPage2}</arg>
+<arg>5</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200924 23:22:33.995" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200924 23:22:33.709" endtime="20200924 23:22:33.995"></status>
+</kw>
+<msg timestamp="20200924 23:22:34.000" level="FAIL">Text 'Form Items' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20200924 23:22:28.686" endtime="20200924 23:22:34.000"></status>
+</kw>
+<status status="FAIL" starttime="20200924 23:22:28.610" endtime="20200924 23:22:34.001"></status>
+</kw>
+<kw name="Encerrando os testes" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200924 23:22:34.002" endtime="20200924 23:22:36.493"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:22:34.001" endtime="20200924 23:22:36.493"></status>
+</kw>
+<tags>
+<tag>VoltarPage2</tag>
+</tags>
+<status status="FAIL" starttime="20200924 23:22:21.605" endtime="20200924 23:22:36.495" critical="yes">Text 'Form Items' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-s4-t4" name="Scenario: Realizo o logoff">
+<kw name="Iniciando o teste" library="Libs" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlAplicacao}</arg>
+<arg>${navegadorChrome}</arg>
+</arguments>
+<msg timestamp="20200924 23:22:36.506" level="INFO">Opening browser 'chrome' to base url 'localhost:3000'.</msg>
+<status status="PASS" starttime="20200924 23:22:36.505" endtime="20200924 23:22:41.337"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200924 23:22:41.337" endtime="20200924 23:22:43.469"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:22:36.505" endtime="20200924 23:22:43.470"></status>
+</kw>
+<kw name="Given que estou na page3" library="step_Page3">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${viewPage3}</arg>
+</arguments>
+<msg timestamp="20200924 23:22:43.471" level="INFO">Clicking element '//*[@id="root"]/div/header/div[2]/nav/a[3]'.</msg>
+<status status="PASS" starttime="20200924 23:22:43.471" endtime="20200924 23:22:43.577"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>class:Page3_BackgroundImg__2VVSY</arg>
+</arguments>
+<msg timestamp="20200924 23:22:43.595" level="INFO">Current page contains element 'class:Page3_BackgroundImg__2VVSY'.</msg>
+<status status="PASS" starttime="20200924 23:22:43.577" endtime="20200924 23:22:43.595"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:22:43.470" endtime="20200924 23:22:43.596"></status>
+</kw>
+<kw name="Then realizo o logoff da aplicacao" library="step_Page3">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//div[@id='root']/div/header/div[3]/button/div/span/span</arg>
+</arguments>
+<msg timestamp="20200924 23:22:43.605" level="INFO">Clicking element 'xpath=//div[@id='root']/div/header/div[3]/button/div/span/span'.</msg>
+<status status="PASS" starttime="20200924 23:22:43.604" endtime="20200924 23:22:43.736"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//li[3]</arg>
+</arguments>
+<msg timestamp="20200924 23:22:43.736" level="INFO">Clicking element 'xpath=//li[3]'.</msg>
+<status status="PASS" starttime="20200924 23:22:43.736" endtime="20200924 23:22:43.835"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${checkPaginaLogin}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20200924 23:22:43.836" endtime="20200924 23:22:43.926"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:22:43.604" endtime="20200924 23:22:43.926"></status>
+</kw>
+<kw name="Encerrando os testes" library="Libs" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200924 23:22:43.928" endtime="20200924 23:22:46.291"></status>
+</kw>
+<status status="PASS" starttime="20200924 23:22:43.927" endtime="20200924 23:22:46.291"></status>
+</kw>
+<tags>
+<tag>Logoff</tag>
+</tags>
+<status status="PASS" starttime="20200924 23:22:36.504" endtime="20200924 23:22:46.293" critical="yes"></status>
+</test>
+<status status="FAIL" starttime="20200924 23:22:02.460" endtime="20200924 23:22:46.303"></status>
+</suite>
+<status status="FAIL" starttime="20200924 23:20:45.410" endtime="20200924 23:22:46.314"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="2">Critical Tests</stat>
+<stat pass="9" fail="2">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">LoginAplicacao</stat>
+<stat pass="1" fail="0">Logoff</stat>
+<stat pass="2" fail="0">OrdenarColunaDecrescente</stat>
+<stat pass="1" fail="0">OrdenarColunaInline</stat>
+<stat pass="0" fail="1">OrdenarColunaVertical</stat>
+<stat pass="1" fail="0">PreencherCamposHorizontal</stat>
+<stat pass="1" fail="0">SenhaIncorreta</stat>
+<stat pass="1" fail="0">VoltarHome</stat>
+<stat pass="1" fail="0">VoltarPage1</stat>
+<stat pass="0" fail="1">VoltarPage2</stat>
+</tag>
+<suite>
+<stat pass="9" fail="2" id="s1" name="Testcases">Testcases</stat>
+<stat pass="2" fail="0" id="s1-s1" name="feature Login">Testcases.feature Login</stat>
+<stat pass="2" fail="0" id="s1-s2" name="feature Page1">Testcases.feature Page1</stat>
+<stat pass="2" fail="1" id="s1-s3" name="feature Page2">Testcases.feature Page2</stat>
+<stat pass="3" fail="1" id="s1-s4" name="feature Page3">Testcases.feature Page3</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
